@@ -1,6 +1,12 @@
-<pre>
 <?php
+ini_set('display_errors', true); // debugging
 
-require_once("./api.class.php");
+require_once("./example/api.extended.php");
 
-var_dump( $_GET );
+$api = new Example();
+
+include "./include/header.php";
+
+include $api->validPath();
+
+include "./include/footer.php";

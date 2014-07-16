@@ -2,5 +2,6 @@
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^([a-z0-9-]+)/([a-z0-9-\/]+)/?$ /home/storage/d/05/6c/sistemaathos1/public_html/ura/index.php?page=$1&get=$2 [NC,L,QSA]
+    RewriteRule ^([a-z0-9-]+)/?([a-z0-9-\/]+)?/?$ /FULL/PATH/TO/YOUR/public_html/example/index.php?path=$1&get=$2 [NC,L,QSA]
+    RewriteRule ^(include|core)\/?(.*)?$ - [R=404,L,NC]
 </IfModule>
